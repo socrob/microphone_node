@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import microphone_node_ros.microphone_node
+
+if __name__ == '__main__':
+ microphone_node_ros.microphone_node.main()

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="microphone_device" default="rode"/>
+
+    <node  pkg="microphone_node" type="microphone_node" name="microphone_node" output="screen" required="false" respawn="false">
+        <param name="~microphone_device" value="$(arg microphone_device)"/>
+        <param name="sample_rate" if="$(eval microphone_device == 'rode')" value="48000"/>
+        <param name="sample_rate" unless="$(eval microphone_device == 'rode')" value="16000"/>
+        <param name="frame_length" value="512"/>
+    </node>
+</launch>
