@@ -9,7 +9,6 @@ from audio_common_msgs.msg import AudioData, AudioInfo
 from threading import Lock
 
 # ros independent imports
-import pyaudio
 from .utils import open_audio_stream
 
 DEBUG = False

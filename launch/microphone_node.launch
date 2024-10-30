@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="microphone_device" default="rode"/>
+    <arg name="microphone_device" default="default"/>
 
     <node  pkg="microphone_node" type="microphone_node" name="microphone_node" output="screen" required="false" respawn="false">
         <param name="~microphone_device" value="$(arg microphone_device)"/>
